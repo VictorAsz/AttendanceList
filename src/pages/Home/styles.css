@@ -31,23 +31,54 @@
     border-radius: 5px;
     border: none ;
     font-size: 16px;
+    
 }
 
-.container button{
-    width: 50%;
+.divButton{
+  display: flex;
+  align-items: center;
+  margin: 12px 0 84px;
+  justify-content: space-between;
+  width: 52%;
+}
+
+.button1{
+  
+    width: 65%;
     padding: 24px;
     font-weight: 700;
     background: #67d481;
     color: #ffff;
     border-radius: 5px;
-    margin: 12px 0 84px;
+    
     border: none;
     font-size: 16px;
+   
+    
 
     cursor: pointer;
     transition: filter 0.2s;
 }
 
-.container button:hover {
+.button1:hover {
+    filter: brightness(0.9);
+  }
+
+  .button2{
+    
+    width: 30%;
+    padding: 24px;
+    font-weight: 700;
+    background: #c58ce0;
+    color: #ffffff;
+    border-radius: 5px;
+  
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: filter 0.2s;
+}
+
+.button2:hover {
     filter: brightness(0.9);
   }

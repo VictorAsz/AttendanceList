@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 
 import './styles/global.css'
 
-import { Home } from './pages/Home/index.jsx'
+import { Home } from './pages/Home/index.tsx'
 
 
 

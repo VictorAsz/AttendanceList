@@ -1,19 +1,39 @@
 .card {
-    height: 100%;
-    width: 50%;
-  
-    background: #6ba0d9;
-    color: #fff;
-  
-    border-radius: 10px;
-    margin-bottom: 20px;
-  
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 24px;
-  }
-  
-  .card strong {
-    font-size: 18px;
-  }
+  height: 100%;
+  width: 50%;
+
+  background: #6ba0d9;
+  color: #fff;
+
+  border-radius: 10px;
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.card strong {
+  font-size: 18px;
+}
+
+.delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgb(236, 93, 93);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete:hover {
+  background-color: white;
+  color: red;
+}
