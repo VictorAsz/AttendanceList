@@ -23,6 +23,7 @@ export function Home() {
   // add student
   function handleAddStudent() {
     const newStudent = {
+      id: Date.now(),
       name: studentName,
       time: new Date().toLocaleTimeString("pt-br", {
         hour: "2-digit",
@@ -51,10 +52,8 @@ export function Home() {
     }
   }
 
-  function handleDelete(studentTime: string) {
-    const newStudents = students.filter(
-      (student) => student.time != studentTime
-    );
+  function handleDelete(id: string) {
+    const newStudents = students.filter((student) => student.id != Number(id));
 
     setStudents(newStudents);
   }
@@ -95,11 +94,7 @@ export function Home() {
         </button>
       </div>
       {students.map((student) => (
-        <Card
-          key={student.time}
-          student={student}
-          handleDelete={handleDelete}
-        />
+        <Card key={student.id} student={student} handleDelete={handleDelete} />
       ))}
     </div>
   );

@@ -1,12 +1,13 @@
 import "./styles.css";
 
 export type CardProps = {
+  id: number;
   name: string;
   time: string;
 };
 
 export function Card(props: any) {
-  const { name, time } = props.student;
+  const { id, name, time } = props.student;
   return (
     <div className="card">
       <strong>{name}</strong>
@@ -14,7 +15,7 @@ export function Card(props: any) {
       <span
         className="delete"
         onClick={() => {
-          props.handleDelete(time);
+          props.handleDelete(id);
         }}
       >
         {" "}
