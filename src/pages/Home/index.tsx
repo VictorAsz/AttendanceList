@@ -1,4 +1,9 @@
-import React, { useState, useEffect } from "react";
+import {
+  useState,
+  useEffect,
+  DetailedHTMLProps,
+  InputHTMLAttributes,
+} from "react";
 import "./styles.css";
 
 // imports
@@ -35,6 +40,17 @@ export function Home() {
     setStudents([]);
   };
 
+  function handleKeyDown(
+    event: DetailedHTMLProps<
+      InputHTMLAttributes<HTMLInputElement>,
+      HTMLInputElement
+    >
+  ) {
+    if (event.key === "Enter") {
+      handleAddStudent();
+    }
+  }
+
   function handleDelete(studentTime: string) {
     const newStudents = students.filter(
       (student) => student.time != studentTime
@@ -68,6 +84,7 @@ export function Home() {
         type="text"
         placeholder="Digite o nome..."
         onChange={(e) => setStudentName(e.target.value)}
+        onKeyDown={handleKeyDown}
       />
       <div className="divButton">
         <button className="button1" onClick={handleAddStudent}>
